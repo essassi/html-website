@@ -119,19 +119,18 @@ submit.onclick = function () {
             timer: 1500,
           });
         }
-      } else {
-        datPro;
       }
+      clearDate();
+    } else {
+      datPro[tmp] = newPro;
+      mood = "create";
+      submit.innerHTML = "create";
+      count.style.display = "block";
     }
-    clearDate();
   } else {
-    datPro[tmp] = newPro;
-    mood = "create";
-    submit.innerHTML = "create";
-    count.style.display = "block";
+    datPro;
   }
   //save in localstorage
-  
 
   localStorage.setItem("product", JSON.stringify(datPro));
   readData();
@@ -181,46 +180,42 @@ readData();
 
 //delete
 function deleteProduct(i) {
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        datPro.splice(i, 1);
-        localStorage.product = JSON.stringify(datPro);
-        Swal.fire("Deleted!", "Your file has been deleted.", "success");
-          readData();
-
-         
-      }
-    });
- 
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You won't be able to revert this!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, delete it!",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      datPro.splice(i, 1);
+      localStorage.product = JSON.stringify(datPro);
+      Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      readData();
+    }
+  });
 }
 
 function deleteAll() {
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete all!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        localStorage.clear();
-        datPro.splice(0);
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You won't be able to revert this!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, delete all!",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      localStorage.clear();
+      datPro.splice(0);
 
-        readData();
-        Swal.fire("Deleted!", "Your file has been deleted.", "success");
-      }
-    });
-
+      readData();
+      Swal.fire("Deleted!", "Your file has been deleted.", "success");
+    }
+  });
 }
 
 //update
@@ -240,6 +235,8 @@ function updateProduct(i) {
     top: 0,
     behavior: "smooth",
   });
+    readData();
+
 }
 
 //search
@@ -313,3 +310,16 @@ scroll.onclick = function () {
     behavior: "smooth",
   });
 };
+document.addEventListener("visibilitychange", function () {
+  let ongle = document.getElementById("ongle");
+  let ongleicone = document.getElementById("ongleicone");
+  if (document.visibilityState === "visible") {
+    // L'utilisateur est actuellement sur la page (onglet actif).
+    ongle.innerHTML = `PRODUCT MANGEMENT SYSTEM`;
+    ongleicone.href = "images/new-product.png";
+  } else {
+    // La page est cachée (l'utilisateur a basculé vers un autre onglet ou une autre fenêtre).
+    ongle.innerHTML = `Come Back`;
+    ongleicone.href = "images/please.png";
+  }
+});

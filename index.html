@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="body">
+    <!-- <button id="open" class="open">Open</button>
+    <button id="close" class="close">Close</button>
+    <div class="container" id="contanier">
+        <p>home</p>
+        <p>courses</p>
+        <p>news</p>
+        <p>probleme solving</p>
+        <p>quizs</p>
+        <p>blog</p>
+        <p>chat</p>
+    </div> -->
+    <!-- <div onclick="setcolor(this.id)" id="red"></div>
+    <div onclick="setcolor(this.id)" id="blue"></div>
+    <div onclick="setcolor(this.id)" id="yellow"></div>
+    <div onclick="setcolor(this.id)" id="green"></div>
+    <div onclick="setcolor(this.id)" id="black"></div> -->
+
+    <div class="crud">
+      <button class="dark" id="dark">Light Mode</button>
+      <p id="scroll">↑</p>
+
+      <div class="head">
+        <h2>crud</h2>
+        <p>Product Mangement System</p>
+      </div>
+      <div class="input">
+        <input
+          type="text"
+          placeholder="title"
+          name="title"
+          id="title"
+          required
+        />
+        <div class="price">
+          <input
+            onkeyup=" getTotal()"
+            type="number"
+            placeholder="price"
+            id="price"
+            required
+          />
+          <input
+            onkeyup=" getTotal()"
+            type="number"
+            placeholder="taxes"
+            id="taxes"
+            required
+          />
+          <input
+            onkeyup=" getTotal()"
+            type="number"
+            placeholder="ads"
+            id="ads"
+            required
+          />
+          <input
+            onkeyup=" getTotal()"
+            type="number"
+            placeholder="discount"
+            id="discount"
+          />
+          <small id="total"></small>
+        </div>
+        <input type="number" id="count" placeholder="count" />
+        <input type="text" id="category" placeholder="category" />
+        <button id="submit">Create</button>
+      </div>
+
+      <div class="output">
+        <div class="searchBlock">
+          <input
+            onkeyup=" searchProduct(this.value)"
+            type="text"
+            placeholder="search"
+            id="search"
+          />
+          <div class="btnSearch">
+            <button onclick="getSearchMood(this.id)" id="serachTitle">
+              Search By Title
+            </button>
+            <button onclick="getSearchMood(this.id)" id="searchCategory">
+              Search By category
+            </button>
+          </div>
+        </div>
+        <div id="deleteAll"></div>
+
+        <table>
+          <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+          </tr>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  </body>
+</html>

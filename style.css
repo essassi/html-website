@@ -1,0 +1,203 @@
+/* * {
+  margin: 0;
+}
+.container {
+  background-color: brown;
+  color: white;
+  width: 150px;
+  height: 100vh;
+}
+.container p {
+  padding: 5px;
+}
+.container p:hover,
+button:hover {
+  background-color: black;
+  cursor: pointer;
+}
+button {
+  background-color: brown;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+#close{
+    position: absolute;
+    left: 155px;
+}
+.discont,.disclo,.disop{
+    display: none;
+} */
+/* div {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+#red {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
+#yellow {
+  height: 50px;
+  width: 50px;
+  background-color: yellow;
+}
+#green {
+  height: 50px;
+  width: 50px;
+  background-color: green;
+}
+#blue {
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+}
+#black {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+} */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #222;
+  color: #fff;
+  font-family: system-ui;
+}
+body.dark {
+  background-color: #dcdbdb;
+  color: #222;
+}
+.crud {
+  width: 80%;
+  margin: auto;
+}
+.head {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+button {
+  cursor: pointer;
+}
+button:hover {
+  border: 1px solid orange !important;
+  background-color: orange !important;
+}
+.dark {
+  background-color: #222;
+  color: #fff;
+  border: none;
+}
+.dark.light {
+  background-color: #dcdbdb;
+  color: #222;
+  border: none;
+}
+input {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: none;
+  margin: 4px 0;
+  border-radius: 4px;
+  padding: 4px;
+  background: #111;
+  color: #fff;
+}
+input:focus {
+  transform: scale(1.1);
+  background-color: #000;
+}
+input.light {
+  background: #ececec;
+  color: #111;
+}
+input.light:focus {
+  background-color: #fff;
+}
+.price input {
+  width: 20%;
+}
+#total {
+  background: #a00d02;
+  padding: 5px 2px;
+  border-radius: 4px;
+  color: #fff;
+}
+#total::before {
+  content: "Total: ";
+}
+#submit,
+#serachTitle,
+#searchCategory,
+#update,
+#delete,
+#all,
+#deleteAll button {
+  width: 100%;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background: #5e0282;
+  color: #fff;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+#submit:hover,
+#serachTitle:hover,
+#searchCategory:hover,
+#update:hover,
+#delete:hover,
+#deleteAll button:hover {
+  background: #8501ba !important;
+  border: 1px solid #8501ba !important;
+  letter-spacing: 1px;
+}
+.btnSearch {
+  display: flex;
+  justify-content: space-between;
+}
+.btnSearch button {
+  width: 45% !important;
+}
+table {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+table th {
+  text-transform: uppercase;
+}
+th,
+td {
+  padding: 5px;
+}
+#deleteAll {
+  margin: 20px 0;
+}
+#scroll {
+  float: right;
+  background: orange;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  left: 90%;
+  margin: 20px 20px;
+  z-index: 99;
+  transition: 0.5s;
+  display: none;
+  top: 50%;
+  bottom: 50%;
+}
+#scroll:hover {
+  background-color: rgb(180, 137, 59);
+  letter-spacing: 1px;
+}

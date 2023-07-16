@@ -316,10 +316,10 @@ document.addEventListener("visibilitychange", function () {
   if (document.visibilityState === "visible") {
     // L'utilisateur est actuellement sur la page (onglet actif).
     ongle.innerHTML = `PRODUCT MANGEMENT SYSTEM`;
-    ongleicone.href = "images/new-product.png";
+    ongleicone.href = "new-product.png";
   } else {
     // La page est cachée (l'utilisateur a basculé vers un autre onglet ou une autre fenêtre).
     ongle.innerHTML = `Come Back`;
-    ongleicone.href = "images/please.png";
+    ongleicone.href = "please.png";
   }
 });

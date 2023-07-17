@@ -269,8 +269,9 @@ function searchProduct(value) {
 }
 //scroll
 let scroll = document.getElementById("scroll");
+let scrolldown = document.getElementById("scrolldown");
 function scrolling() {
-  if (scrollY > 700) {
+  if (scrollY > 500) {
     scroll.style.display = "block";
   } else {
     scroll.style.display = "none";
@@ -283,6 +284,21 @@ scroll.onclick = function () {
     behavior: "smooth",
   });
 };
+function scrollingdown() {
+  if (scrollY + window.innerHeight >= document.body.scrollHeight - 5) {
+    scrolldown.style.display = "none";
+  } else {
+    scrolldown.style.display = "block";
+  }
+}
+addEventListener("scroll", scrollingdown);
+scrolldown.onclick = function () {
+  scrollTo({
+    top: document.body.scrollHeight,
+    behavior: "smooth",
+  });
+};
+
 document.addEventListener("visibilitychange", function () {
   let ongle = document.getElementById("ongle");
   let ongleicone = document.getElementById("ongleicone");

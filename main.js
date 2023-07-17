@@ -1,30 +1,3 @@
-// let clos = document.getElementById("close");
-// let ope = document.getElementById("open");
-// let contanier = document.getElementById("contanier");
-
-// contanier.classList.add("discont");
-// clos.classList.add("disclo");
-
-// ope.onclick=()=>{
-//     ope.classList.add("disop");
-//     contanier.classList.remove("discont");
-//     clos.classList.remove("disclo");
-
-// }
-// clos.onclick=()=>{
-//     ope.classList.remove("disop");
-//     contanier.classList.add("discont");
-//     clos.classList.add("disclo");
-// }
-
-// if (localStorage.length > 0) {
-//   document.body.style.background = localStorage.color;
-// }
-// function setcolor(color) {
-//   localStorage.setItem("color", color);
-//   document.body.style.background = color;
-// }
-
 //dark Mode/ light Mode
 let body = document.getElementById("body");
 let dark = document.getElementById("dark");

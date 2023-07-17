@@ -179,7 +179,8 @@ td {
 #deleteAll {
   margin: 20px 0;
 }
-#scroll {
+#scroll,
+#scrolldown {
   float: right;
   background: orange;
   border-radius: 100%;
@@ -194,10 +195,16 @@ td {
   z-index: 99;
   transition: 0.5s;
   display: none;
-  top: 50%;
-  bottom: 50%;
+  top: 20%;
+  bottom: 0%;
 }
-#scroll:hover {
+#scroll:hover,
+#scrolldown:hover {
   background-color: rgb(180, 137, 59);
   letter-spacing: 1px;
+}
+#scrolldown {
+  top: 0% ;
+  bottom: 0% ;
+  
 }

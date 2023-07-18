@@ -147,3 +147,7 @@ td {
   top: 0% ;
   bottom: 0% ; 
 }
+.container{
+    text-align: center;
+    margin: 30px auto;
+}
